@@ -2,6 +2,7 @@ package ayaya.abstractions;
 
 import ayaya.controllers.DataController;
 import ayaya.controllers.UIController;
+import ayaya.ui.TagUI;
 
 import java.util.ArrayList;
 
@@ -87,6 +88,7 @@ public abstract class AbstractDataUI extends AbstractUI {
         var subUIs = new ArrayList<AbstractDataUI>(this.getSubUIs());
         for (var subTagUI : subUIs) subTagUI.deleteUI();
         this.parentUI.removeSubUI(this);
+        if (this instanceof TagUI tagUI) UIController.unregisterUI(tagUI);
     }
 
 }
