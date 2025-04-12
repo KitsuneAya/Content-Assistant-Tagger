@@ -14,7 +14,7 @@ public abstract class AbstractDataUI extends AbstractUI {
     //\\//\\//\\//\\//\\//\\
 //|/  Class Fields         \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
-    protected AbstractData data;                    // The data object displayed by this UI
+    protected AbstractData data;             // The data object displayed by this UI
     protected AbstractUI parentUI;           // Whatever object is displaying this UI
     protected AbstractDataUI parentDataUI;   // Whatever object is displaying the parent data of this UI
 
