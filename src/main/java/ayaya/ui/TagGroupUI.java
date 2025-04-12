@@ -6,6 +6,9 @@ import ayaya.UIMode;
 import ayaya.data.TagData;
 import ayaya.data.TagGroupData;
 import ayaya.TagGroupType;
+import ayaya.errors.NullDataException;
+import ayaya.errors.NullDataParentUIException;
+import ayaya.errors.NullParentUIException;
 import ayaya.options.Preferences;
 import ayaya.util.UtilityFunctions;
 import com.formdev.flatlaf.ui.FlatRoundBorder;
@@ -64,6 +67,11 @@ public class TagGroupUI extends AbstractDataUI {
         this.parentUI = parentTagLayerUI;
         this.parentTag = parentTag;
         this.data = tagGroupData;
+
+        if (this.parentUI == null) throw new NullParentUIException(TagUI.class);
+        if (this.data == null) throw new NullDataException(TagUI.class);
+        if (this.parentTag == null && !UIController.isFirstTagLayerUI(this.parentUI))
+            throw new NullDataParentUIException(TagGroupUI.class);
 
         // Set Layout
         this.setLayout(new GridBagLayout());
