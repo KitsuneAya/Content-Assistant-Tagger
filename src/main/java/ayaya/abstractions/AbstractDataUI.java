@@ -1,5 +1,7 @@
 package ayaya.abstractions;
 
+import ayaya.controllers.UIController;
+
 import java.util.ArrayList;
 
 @SuppressWarnings("all")
@@ -63,6 +65,7 @@ public abstract class AbstractDataUI extends AbstractUI {
     public void delete() {
         this.deleteUI();
         this.parentDataUI.deleteData(this.data);
+        UIController.removeEmptyExtraTagLayers();
     }
 
     /**

@@ -11,6 +11,7 @@ public class Preferences {
     public static int uiGapSize = uiSize / 6;
 
     public static int initNumOfTagLayers = 4;
+    public static boolean keepEmptyExtraTagLayers = false;
 
     public static String defaultTagGroupName = "Tag Group";
     public static TagGroupType defaultNewGrpType = TagGroupType.ANY;

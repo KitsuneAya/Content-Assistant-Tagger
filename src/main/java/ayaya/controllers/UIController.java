@@ -121,6 +121,19 @@ public class UIController { private UIController() {}
         return nextLayerIndex < TAG_LAYERS.size();
     }
 
+    public static void removeEmptyExtraTagLayers() {
+
+        if (Preferences.keepEmptyExtraTagLayers) return;
+
+        int lastIndex = TAG_LAYERS.size() - 1;
+        int lastAllowedEmptyIndex = Preferences.initNumOfTagLayers - 1;
+
+        for (int i = lastIndex; i > lastAllowedEmptyIndex; i--) {
+            var tagLayer = TAG_LAYERS.get(i);
+            if (tagLayer.getSubUISize() == 0) removeLastTagLayerUI();
+        }
+
+    }
 
 
     //\\//\\//\\//\\//\\//\\
