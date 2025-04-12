@@ -61,11 +61,11 @@ public class TagGroupUI extends AbstractDataUI {
 //|/  Constructors         \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
 
-    public TagGroupUI(TagGroupData tagGroupData, TagLayerUI parentTagLayerUI, TagUI parentTag) {
+    public TagGroupUI(TagGroupData tagGroupData, TagLayerUI parentTagLayerUI, TagUI parentTagUI) {
 
-        super(parentTag, parentTagLayerUI, tagGroupData);
+        super(parentTagUI, parentTagLayerUI, tagGroupData);
         this.parentUI = parentTagLayerUI;
-        this.parentTag = parentTag;
+        this.parentTag = parentTagUI;
         this.data = tagGroupData;
 
         if (this.parentUI == null) throw new NullParentUIException(TagUI.class);
