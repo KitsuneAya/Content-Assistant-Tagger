@@ -23,8 +23,9 @@ public final class GlobalKeyListener implements NativeKeyListener { private Glob
         var keyCode = e.getKeyCode();
         this.modifierKeyControl(keyCode, true);
 
+        // TODO Make this function correctly
         // Keeps track of modifier keys without doing anything when the app is not focused.
-        if (!MainWindow.INSTANCE.hasFocus()) return;
+        // if (!MainWindow.INSTANCE.hasFocus()) return;
 
         if (isCtrlPressed) {
 
@@ -49,8 +50,9 @@ public final class GlobalKeyListener implements NativeKeyListener { private Glob
         var keyCode = e.getKeyCode();
         this.modifierKeyControl(keyCode, false);
 
+        // TODO Make this function correctly
         // Keeps track of modifier keys without doing anything when the app is not focused.
-        if (!MainWindow.INSTANCE.hasFocus()) return;
+        // if (!MainWindow.INSTANCE.hasFocus()) return;
 
         if (keyCode == VC_ALT) {
             UIController.displayDeleteButtons(false);
