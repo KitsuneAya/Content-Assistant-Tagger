@@ -22,10 +22,10 @@ public final class MainWindow extends JFrame { private MainWindow() {}
         INSTANCE.setTitle("CAT - Content Assistant Tagger");
         INSTANCE.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        INSTANCE.setSizeAndLocation();
-        INSTANCE.setLayout();
-        INSTANCE.initContentPane();
-        INSTANCE.initGlobalKeyListener();
+        setSizeAndLocation();
+        setLayout();
+        initContentPane();
+        initGlobalKeyListener();
 
     }
 
