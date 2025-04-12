@@ -56,6 +56,12 @@ public final class MenuBar extends JMenuBar {
         editMenu.setName("Edit Menu");
         editMenu.setMnemonic('E');
 
+        MenuItem copyTagsMI = new MenuItem("Copy Tags", "Ctrl + Shift + C");
+        copyTagsMI.addActionListener(_ -> DataController.copyTagsToClipboard());
+        editMenu.add(copyTagsMI);
+
+        editMenu.addSeparator();
+
         JMenuItem tagModeMI = new JMenuItem("Tagging Mode");
         editMenu.add(tagModeMI);
 
