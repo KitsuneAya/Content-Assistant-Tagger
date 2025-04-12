@@ -10,6 +10,8 @@ public class Preferences {
     public static int uiSize = 24;
     public static int uiGapSize = uiSize / 6;
 
+    public static int menuBarItemWidth = 220;
+
     public static int initNumOfTagLayers = 4;
     public static boolean keepEmptyExtraTagLayers = false;
 
