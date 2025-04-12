@@ -24,19 +24,19 @@ public final class MenuBar extends JMenuBar {
         fileMenu.setName("File Menu");
         fileMenu.setMnemonic('F');
 
-        JMenuItem newFileMI = new JMenuItem("New");
+        MenuItem newFileMI = new MenuItem("New", "");
         newFileMI.addActionListener(_ -> DataController.newData());
         fileMenu.add(newFileMI);
 
-        JMenuItem openMI = new JMenuItem("Open");
+        MenuItem openMI = new MenuItem("Open", "Ctrl + O");
         openMI.addActionListener(_ -> DataController.loadData());
         fileMenu.add(openMI);
 
-        JMenuItem saveMI = new JMenuItem("Save");
+        MenuItem saveMI = new MenuItem("Save", "Ctrl + S");
         saveMI.addActionListener(_ -> DataController.saveData());
         fileMenu.add(saveMI);
 
-        JMenuItem saveAsMI = new JMenuItem("Save as...");
+        MenuItem saveAsMI = new MenuItem("Save as...", "Ctrl + Alt + S");
         saveAsMI.addActionListener(_ -> DataController.saveDataAs());
         fileMenu.add(saveAsMI);
 
@@ -93,11 +93,11 @@ public final class MenuBar extends JMenuBar {
 
         editMenu.addSeparator();
 
-        JMenuItem addTagLayerMI = new JMenuItem("Add TagLayer");
+        MenuItem addTagLayerMI = new MenuItem("Add TagLayer", "Ctrl + T");
         addTagLayerMI.addActionListener(_ -> UIController.addTagLayerUI());
         editMenu.add(addTagLayerMI);
 
-        JMenuItem removeTagLayerMI = new JMenuItem("Remove TagLayer");
+        MenuItem removeTagLayerMI = new MenuItem("Remove TagLayer", "Ctrl + W");
         removeTagLayerMI.addActionListener(_ -> UIController.removeLastTagLayerUI());
         editMenu.add(removeTagLayerMI);
 
