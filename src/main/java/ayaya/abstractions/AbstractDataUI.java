@@ -11,7 +11,7 @@ public abstract class AbstractDataUI extends AbstractUI {
 
 
     //\\//\\//\\//\\//\\//\\
-////  Class Fields         \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  Class Fields         \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
     protected AbstractData data;                    // The data object displayed by this UI
     protected AbstractUI parentUI;           // Whatever object is displaying this UI
@@ -19,7 +19,7 @@ public abstract class AbstractDataUI extends AbstractUI {
 
 
     //\\//\\//\\//\\//\\//\\
-////  Constructors         \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  Constructors         \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
     public AbstractDataUI(AbstractDataUI parentDataUI, AbstractUI parentTag, AbstractData data) {
         this.parentDataUI = parentDataUI;
@@ -29,19 +29,19 @@ public abstract class AbstractDataUI extends AbstractUI {
 
 
     //\\//\\//\\//\\//\\//\\                                             Accessors and mutators that only effect this UI
-////  UI Methods           \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  UI Methods           \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
     public abstract void showDeleteButton(boolean b);
 
 
     //\\//\\//\\//\\//\\//\\                                    Access and mutators that can interact with the Parent UI
-////  Parent UI Methods    \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  Parent UI Methods    \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
     public abstract <T extends AbstractUI> T getParentUI();
 
 
     //\\//\\//\\//\\//\\//\\                                       Accessors and mutators that can interact with sub-UIs
-////  Sub-UI Methods       \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  Sub-UI Methods       \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
 
     /**
@@ -57,7 +57,7 @@ public abstract class AbstractDataUI extends AbstractUI {
 
 
     //\\//\\//\\//\\//\\//\\                                                     Methods for deleting UIs and their data
-////  Deletion Methods     \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  Deletion Methods     \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
 
     /**
