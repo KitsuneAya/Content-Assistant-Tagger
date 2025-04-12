@@ -25,8 +25,8 @@ public abstract class AbstractUI extends JPanel {
 //|/  Sub-UI Methods       \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
     /**
-     * Allows methods outside of the class to iterate over sub-UI components.
-     * @return The UI components displaying subdata of the data displayed by this.
+     * Allows methods outside the class to iterate over sub-UI components.
+     * @return The UI components displaying sub-data of the data displayed by this.
      * @param <T> A {@link ayaya.ui.TagGroupUI} or a {@link ayaya.ui.TagUI}.
      */
     public abstract <T extends AbstractDataUI> ArrayList<T> getSubUIs();
