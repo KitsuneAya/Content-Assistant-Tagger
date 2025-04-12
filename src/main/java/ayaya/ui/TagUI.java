@@ -244,6 +244,7 @@ public class TagUI extends AbstractDataUI {
 
     }
 
+    @SuppressWarnings("unchecked")
     @Override public TagGroupUI getParentUI() {
         return this.parentUI;
     }
@@ -316,6 +317,7 @@ public class TagUI extends AbstractDataUI {
 
     }
 
+    @SuppressWarnings("unchecked")
     @Override public ArrayList<TagGroupUI> getSubUIs() {
         return this.subUIs;
     }
