@@ -5,6 +5,8 @@ import ayaya.controllers.UIController;
 import ayaya.UIMode;
 import ayaya.data.TagData;
 import ayaya.data.TagGroupData;
+import ayaya.errors.NullDataException;
+import ayaya.errors.NullParentUIException;
 import ayaya.options.Preferences;
 import ayaya.util.UtilityFunctions;
 
@@ -56,6 +58,8 @@ public class TagUI extends AbstractDataUI {
         this.parentUI = parentTagGroupUI;
         this.data = tagData;
 
+        if (this.parentUI == null) throw new NullParentUIException(TagUI.class);
+        if (this.data == null) throw new NullDataException(TagUI.class);
 
         // Set Layout
         this.setLayout(new GridBagLayout());
@@ -166,6 +170,7 @@ public class TagUI extends AbstractDataUI {
         // Updates the TagData as the user types
         this.textField.addKeyListener(new KeyAdapter() {
             @Override public void keyReleased(KeyEvent e) {
+                if (data == null) throw new NullDataException(TagUI.class);
                 data.setName(textField.getText());
             }
         });
