@@ -3,7 +3,7 @@ package ayaya.abstractions;
 import javax.swing.*;
 import java.util.ArrayList;
 
-@SuppressWarnings("all")
+
 public abstract class AbstractUI extends JPanel {
 
 
