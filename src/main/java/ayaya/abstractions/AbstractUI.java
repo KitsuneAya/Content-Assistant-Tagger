@@ -31,7 +31,7 @@ public abstract class AbstractUI extends JPanel {
      */
     public abstract <T extends AbstractDataUI> ArrayList<T> getSubUIs();
 
-    /// @return The number of sub-UI components this has access to regardless of their visiblity.
+    /// @return The number of sub-UI components this has access to regardless of their visibility.
     public int getSubUISize() {
         return getSubUIs().size();
     }
