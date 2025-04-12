@@ -5,7 +5,7 @@ import ayaya.controllers.UIController;
 
 import java.util.ArrayList;
 
-@SuppressWarnings("all")
+
 public abstract class AbstractDataUI extends AbstractUI {
 
 
