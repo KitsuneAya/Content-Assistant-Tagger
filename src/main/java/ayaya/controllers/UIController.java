@@ -56,7 +56,7 @@ public class UIController { private UIController() {}
      */
     public static void unregisterUI(TagUI ui) {
         TAG_MAP.remove(ui);
-    }
+    } // TODO Use this actually
 
 
     //\\//\\//\\//\\//\\//\\
