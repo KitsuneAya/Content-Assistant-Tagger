@@ -148,7 +148,7 @@ public final class DataController { private DataController() {}
 
 
     /// Creates and returns a new TagGroupData object in the RootData of the tagging scheme.
-    public static TagGroupData addNewParentlessTagGroupData(TagGroupType type) {
+    public static TagGroupData addNewRootTagGroupData(TagGroupType type) {
         return rootData.addNewSubData(type);
     }
 
