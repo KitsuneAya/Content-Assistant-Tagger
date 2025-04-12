@@ -33,6 +33,8 @@ public final class GlobalKeyListener implements NativeKeyListener { private Glob
             else if (isAltPressed && keyCode == VC_S) DataController.saveDataAs();          // Ctrl + Alt + s
             else if (keyCode == VC_S) DataController.saveData();                            // Ctrl + s
             else if (keyCode == VC_O) DataController.loadData();                            // Ctrl + o
+                case VC_T -> UIController.addTagLayerUI();                          // Ctrl + T
+                case VC_W -> UIController.removeLastTagLayerUI();                   // Ctrl + W
 
         } else if (isAltPressed) {
 
