@@ -3,6 +3,7 @@ package ayaya.controllers;
 import ayaya.App;
 import ayaya.Log;
 import ayaya.TagGroupType;
+import ayaya.abstractions.AbstractData;
 import ayaya.data.RootData;
 import ayaya.data.TagGroupData;
 import ayaya.options.Preferences;
@@ -150,6 +151,11 @@ public final class DataController { private DataController() {}
     /// Creates and returns a new TagGroupData object in the RootData of the tagging scheme.
     public static TagGroupData addNewRootTagGroupData(TagGroupType type) {
         return rootData.addNewSubData(type);
+    }
+
+    /// Deletes a TagGroupData object from the RootData of the tagging scheme.
+    public static void deleteRootTagGroupData(AbstractData data) {
+        rootData.deleteSubDatum(data);
     }
 
     // This is sort of a hybrid of UIController and DataController,

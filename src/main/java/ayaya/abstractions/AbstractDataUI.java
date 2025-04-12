@@ -1,5 +1,6 @@
 package ayaya.abstractions;
 
+import ayaya.controllers.DataController;
 import ayaya.controllers.UIController;
 
 import java.util.ArrayList;
@@ -63,8 +64,12 @@ public abstract class AbstractDataUI extends AbstractUI {
      * Deletes this UI's data and removes it and its subUIs from display.
      */
     public void delete() {
+
         this.deleteUI();
-        this.parentDataUI.deleteData(this.data);
+        try { this.parentDataUI.deleteData(this.data); }
+        catch (Exception _) { DataController.deleteRootTagGroupData(this.data); }
+        // Catch happens when the TagGroup's data is in the RootData
+
         UIController.removeEmptyExtraTagLayers();
     }
 

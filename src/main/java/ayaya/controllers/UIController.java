@@ -145,7 +145,7 @@ public class UIController { private UIController() {}
 
         var firstTagLayerUI = TAG_LAYERS.getFirst();
 
-        var tagGroupData = DataController.addNewParentlessTagGroupData(type);
+        var tagGroupData = DataController.addNewRootTagGroupData(type);
         var tagGroupUI = new TagGroupUI(tagGroupData, firstTagLayerUI, null);
 
         firstTagLayerUI.displayTagGroup(tagGroupUI);
