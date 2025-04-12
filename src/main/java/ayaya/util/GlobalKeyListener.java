@@ -29,16 +29,24 @@ public final class GlobalKeyListener implements NativeKeyListener { private Glob
 
         if (isCtrlPressed) {
 
-            if (isShiftPressed && keyCode == VC_C) DataController.copyTagsToClipboard();    // Ctrl + Shift + c
-            else if (isAltPressed && keyCode == VC_S) DataController.saveDataAs();          // Ctrl + Alt + s
-            else if (keyCode == VC_S) DataController.saveData();                            // Ctrl + s
-            else if (keyCode == VC_O) DataController.loadData();                            // Ctrl + o
+            if (isShiftPressed) {
+                if (keyCode == VC_C) DataController.copyTagsToClipboard();          // Ctrl + Shift + C
+            }
+            else if (isAltPressed) {
+                if (keyCode == VC_S) DataController.saveDataAs();                   // Ctrl + Alt + S
+            }
+            else switch (keyCode) {
+                case VC_S -> DataController.saveData();                             // Ctrl + S
+                case VC_O -> DataController.loadData();                             // Ctrl + O
                 case VC_T -> UIController.addTagLayerUI();                          // Ctrl + T
                 case VC_W -> UIController.removeLastTagLayerUI();                   // Ctrl + W
+            }
 
-        } else if (isAltPressed) {
+        }
+        else if (isAltPressed) {
 
             UIController.displayDeleteButtons(true);
+
         }
 
         if (keyCode == VC_F1) {
