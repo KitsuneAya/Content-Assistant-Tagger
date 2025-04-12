@@ -178,9 +178,8 @@ public class UIController { private UIController() {}
         var tagGroupUIs = new ArrayList<TagGroupUI>();
         var tagUIs = new ArrayList<TagUI>();
 
-        // I apologize for the following two lines
-        TAG_LAYERS.forEach(tagLayer -> tagLayer.getSubUIs().forEach(tagGroupUI -> tagGroupUIs.add(tagGroupUI)));
-        tagGroupUIs.forEach(tagGroupUI -> tagGroupUI.getSubUIs().forEach(tagUI -> tagUIs.add(tagUI)));
+        TAG_LAYERS.forEach(tagLayer -> tagGroupUIs.addAll(tagLayer.getSubUIs()));
+        tagGroupUIs.forEach(tagGroupUI -> tagUIs.addAll(tagGroupUI.getSubUIs()));
 
         tagGroupUIs.forEach(TagGroupUI::setVisibility);
         tagUIs.forEach(TagUI::refreshUI);
