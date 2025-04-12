@@ -8,7 +8,7 @@ public abstract class AbstractUI extends JPanel {
 
 
     //\\//\\//\\//\\//\\//\\                                             Accessors and mutators that only effect this UI
-////  UI Methods           \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  UI Methods           \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
     /// Ensures this UI displayed on screen is up to date with data in memory and mode selection.
     public abstract void refreshUI();
@@ -22,7 +22,7 @@ public abstract class AbstractUI extends JPanel {
 
 
     //\\//\\//\\//\\//\\//\\                                       Accessors and mutators that can interact with sub-UIs
-////  Sub-UI Methods       \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
+//|/  Sub-UI Methods       \\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\\//\
 
     /**
      * Allows methods outside of the class to iterate over sub-UI components.
