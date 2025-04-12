@@ -5,8 +5,8 @@ import ayaya.controllers.UIController;
 import ayaya.UIMode;
 import ayaya.data.TagData;
 import ayaya.data.TagGroupData;
-import ayaya.errors.NullDataException;
-import ayaya.errors.NullParentUIException;
+import ayaya.exceptions.NullDataException;
+import ayaya.exceptions.NullParentUIException;
 import ayaya.options.Preferences;
 import ayaya.util.UtilityFunctions;
 

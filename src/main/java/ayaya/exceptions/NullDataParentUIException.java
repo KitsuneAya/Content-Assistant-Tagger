@@ -1,4 +1,4 @@
-package ayaya.errors;
+package ayaya.exceptions;
 
 import ayaya.Log;
 
