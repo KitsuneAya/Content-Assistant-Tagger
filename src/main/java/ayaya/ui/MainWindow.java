@@ -10,7 +10,7 @@ import com.github.kwhat.jnativehook.NativeHookException;
 import javax.swing.*;
 import java.awt.*;
 
-@SuppressWarnings("all")
+
 public final class MainWindow extends JFrame { private MainWindow() {}
 
     public static final MainWindow INSTANCE = new MainWindow();
