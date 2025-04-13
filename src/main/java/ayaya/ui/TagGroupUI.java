@@ -397,6 +397,8 @@ public class TagGroupUI extends AbstractDataUI {
      */
     void checkBoxClicked(JCheckBox checkBox) {
 
+        UIController.setVisibilities();
+
         switch (this.data.getType()) { case ANY, NON_TAG: return; } // No validation needed for these types
 
         final int[] bounds = this.getTagSelectionLimits();
