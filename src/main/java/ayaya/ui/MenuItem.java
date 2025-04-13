@@ -28,7 +28,6 @@ public class MenuItem extends JMenuItem {
             var microFont = font.deriveFont(microFontSize++);
             var microFontMetrics = this.getFontMetrics(microFont);
             spacerWidth = microFontMetrics.stringWidth("\u00A0");
-            System.out.println(spacerWidth);
         }
 
         int spacersRequired = spacingRequired / spacerWidth;
