@@ -311,7 +311,7 @@ public class TagGroupUI extends AbstractDataUI {
         if (UIController.isFirstTagLayerUI(this.parentUI)) return;
 
         var parentTagSelected = this.parentTag.isSelected();
-        var parentTagVisible = this.parentTag.getParent().isVisible();
+        var parentTagVisible = this.parentTag.getParentUI().isVisible();
 
         var isVisible = parentTagVisible && parentTagSelected || isEditMode;
         this.setVisible(isVisible);
