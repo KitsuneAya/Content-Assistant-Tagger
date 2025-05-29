@@ -127,7 +127,7 @@ public class TagUI extends AbstractDataUI {
         this.indexSpinner.addChangeListener(_ -> {
             int newIndex = (int) this.indexSpinner.getValue();
             if (newIndex > 0) newIndex--;
-            ((TagGroupUI) this.parentUI).moveTag(this, newIndex);
+            this.parentUI.moveTag(this, newIndex);
         });
     }
     private void initIndexSpinnerPreferredSize() {
