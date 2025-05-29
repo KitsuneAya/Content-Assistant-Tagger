@@ -273,7 +273,6 @@ public class TagUI extends AbstractDataUI {
 
     public void setRow(int position) {
         this.indexSpinner.setValue(position);
-        this.parentUI.refreshUI();
     }
 
 
